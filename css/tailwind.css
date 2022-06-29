@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Benne&family=Bitter&family=Charm&family=Charmonman&family=Emilys+Candy&family=Galada&family=Irish+Grover&family=Lato:wght@300&family=Luckiest+Guy&family=Merriweather&family=Montserrat:ital,wght@0,100;0,300;0,400;1,100&family=Mountains+of+Christmas&family=Odibee+Sans&family=Open+Sans:wght@300;400;700&family=Orbitron:wght@500&family=Road+Rage&family=Source+Sans+3:ital,wght@0,200;0,300;1,200&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply dark:bg-trueGray-900;
+  }
+}
+
+.bg-welcome {
+  background-image: url(../public/img/Ellipse37.png);
+  background-repeat: no-repeat;
+  background-size: 70% 100%;
+  
+ 
+}
+
+.about {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  
+}
+
+.predict {
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.body{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.cards {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  
+}
+
+.sliders{
+  padding: 0 7px !important;
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  body {
+    background-color: none;
+  }
+  .sliders {
+    padding: 0 11px !important;
+  }
+  .bg-welcome{
+    background-size: cover;
+    background-image: -moz-linear-gradient(#c2e4ff);
+  }
+  .partners{
+    display: flex;
+    justify-content: center;
+  }
+  .try {
+    width: 40%;
+  }
+  .footer-logo {
+    width: 70%;
+  }
+  .testimony-section{
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  body {
+    background-color: none;
+  }
+  .sliders {
+    width: 80% !important;
+    padding: 0 11px !important;
+    
+  }
+  .testimony-section{
+    padding-bottom: 3rem;
+  }
+  .bg-welcome{
+    background-size: cover;
+    background-image: -moz-linear-gradient(#c2e4ff);
+  }
+  .partners{
+    display: flex;
+    justify-content: center;
+  }
+  .try {
+    width: 50%;
+  }
+  .footer-logo {
+    width: 80%;
+  }
+  
+}
+@media (max-width: 600px) {
+  body {
+    background-color: none;
+  }
+  .sliders {
+    padding: 0 12px !important;
+  }
+  .bg-welcome{
+    background-size: cover;
+    background-image: -moz-linear-gradient(#c2e4ff);
+  }
+  .partners{
+    display: flex;
+    justify-content: center;
+  }
+  .try {
+    width: 30%;
+  }
+  .footer-logo {
+    width: 60%;
+  }
+  .footer-main{
+    font-size: small;
+  }
+  .footer-sub {
+     font-size: medium;
+  }
+  .social-media{
+    font-size: medium;
+  }
+  .testimony-section{
+    padding-bottom: 2rem;
+  }
+  .tuwo Image{
+    width: 20%;
+    height: 20%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  body {
+    background-color: none;
+  }
+  .sliders {
+    width: 59% !important;
+    padding: 0 11px !important;
+  }
+  .testimony-section{
+    padding-bottom: 3rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1270px) {
+  body {
+    background-color: none;
+  }
+  .sliders {
+    width: 60% !important;
+  }
+  .testimony-section{
+    padding-bottom: 2rem;
+  }
+}
+@media (min-width: 1270px) and (max-width: 1280px) {
+  body {
+    background-color: none;
+  }
+  .sliders {
+    width: 56% !important;
+  }
+  .testimony-section{
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1378px) {
+  body {
+    background-color: none;
+  }
+  .sliders {
+    width: 45% !important;
+  }
+  .testimony-section{
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 1378px) and (max-width: 1578px) {
+  .sliders {
+    width: 45% !important;
+  }
+}
+
+.testimony {
+  background-image: url(../public/img/Rectangle-33.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100% !important;
+}
+
+
+
+.slick-dots li.slick-active button:before {
+  color: #0190FF !important;
+  font-size: 1rem;
+}
+
+.slick-dots li button:before {
+ font-size: 1rem !important;
+}
+
+.footer {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  background-image: linear-gradient(#0099D1, #0099D1, #0099D1);
+}
+
+
+.cta {
+  background-image: linear-gradient(#FAF9F9, #FAF9F9, #FAF9F9);
+}
