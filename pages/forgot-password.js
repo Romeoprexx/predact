@@ -2,10 +2,98 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 // Import react scroll
 import { Link as LinkScroll } from "react-scroll";
+import Image from "next/image";
+import SideImage from '../public/img/pana.png'
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
+const ForgetPassword = () => {
+
+  const SignupSchema = Yup.object().shape({
+    email: Yup.string()
+      .email("Please enter a valid email address")
+      .required('Email is Required'),
+  });
+
+  const onSubmit = async ({ values, actions }) => {
+    console.log(values);
+    console.log(actions);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    actions.resetForm();
 
 
 
-const Navbar = () => {
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+    },
+    validationSchema: SignupSchema,
+    onSubmit
+
+  });
+
+  console.log(formik);
+
+  
+  return (
+    <div>
+      <NavBar />
+      <div class="flex items-center bg-white-500">
+        <div class="flex-1 h-full w-full mx-auto bg-white-500 rounded-lg shadow-xl">
+          <div class="flex flex-col md:flex-row">
+            <div class="w-full md:h-auto md:w-1/2 lg:w-6/12 xl:w-6/12 mx-auto side-img">
+
+              <div className="ml-0 img-div">
+                <Image class="object-cover w-full h-full ml-0 lg:ml-30" src={SideImage}
+                  alt="img" />
+              </div>
+            </div>
+            <div class="flex items-center justify-center p-6 mt-0 lg:-mt-10 sm:p-12 md:w-1/2">
+              <div class="w-full mt-0 xl:mt-10">
+                <h1 class="mb-2 text-2xl lg:text-3xl font-bold text-center text-[#2D2D2D] H2">
+                  Forgot your Password?
+                </h1>
+                <p className="text-center text-lg text-[#2D2D2D] icts">
+                  Type in your email and reset your password from your email
+                </p>
+                <form onSubmit={formik.handleSubmit}>
+                  <div className="id-label mt-0 lg:mt-10 xl:mt-10 md:mt-5">
+                    <label class="block text-md text-[#0000] id">
+                      Email
+                    </label>
+                    <input type="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur}
+                      class={`w-full lg:w-50 px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600 input-field ${formik.errors.email && formik.touched.email ? "input-error" : ""}`}
+                      placeholder="" name="email"
+                    />
+                    {formik.errors.email && formik.touched.email && <p className="error">{formik.errors.email}</p>}
+                  </div>
+                  <div className="flex justify-center mr-0 button-div mt-10">
+                    <button className="" type="submit">
+                      <Link href="/reset-successful">
+                        <a className="block px-4 py-2 mt-4 text-md font-medium leading-5 text-center text-white transition-colors duration-150 border border-transparent rounded-lg active:bg-[#0099D1] hover:bg-[#0099D1] focus:outline-none focus:shadow-outline-[#0099D1] reset-password">
+                          Reset Password
+                        </a>
+                      </Link>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ForgetPassword
+
+
+
+
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState(null);
   const [scrollActive, setScrollActive] = useState(false);
   useEffect(() => {
@@ -17,19 +105,25 @@ const Navbar = () => {
     <>
       <header
         className={
-          "top-0 w-full  z-30 bg-white-500 transition-all " +
+          "top-0 w-full  z-30 bg-white-500 transition-all border shadow shadow-xl " +
           (scrollActive ? " shadow-md pt-0" : " pt-4")
         }
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4 container relative flex flex-wrap items-center justify-between mx-auto lg:justify-between">
           <div className="col-start-1 col-end-2 flex items-center">
-            <img
-              src="/img/predact_logo.png"
-              alt="Logo"
-              className="w-40 cursor-pointer"
-            />
+            <Link href="/">
+              <a>
+                <img
+                  src="/img/predact_logo.png"
+                  alt="Logo"
+                  className="w-40 cursor-pointer"
+                />
+              </a>
+            </Link>
+
+
           </div>
-          <ul className="hidden lg:flex col-start-6 col-end-9 text-[#0190FF] font-bold text-xl items-center ul">
+          <ul className="hidden lg:flex col-start-5 col-end-9 text-[#0190FF] font-bold text-xl items-center ul">
             <LinkScroll
               activeClass="active"
               to="home"
@@ -88,7 +182,7 @@ const Navbar = () => {
             </LinkScroll>
             <LinkScroll
               activeClass="active"
-              href="/register"
+              to="/"
               spy={true}
               smooth={true}
               duration={1000}
@@ -117,7 +211,7 @@ const Navbar = () => {
       </header>
       {/* Mobile Navigation */}
 
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
+      <nav className="fixed bg-white-500 lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
         <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
             <LinkScroll
@@ -164,7 +258,7 @@ const Navbar = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col font-bold items-center text-xs border-t-2 transition-all " +
                 (activeLink === "testimonials"
-                  ?  "  border-orange-500 text-orange-500"
+                  ? "  border-orange-500 text-orange-500"
                   : " border-transparent ")
               }
             >
@@ -196,7 +290,7 @@ const Navbar = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs font-bold border-t-2 transition-all " +
                 (activeLink === "faq"
-                  ?  "  border-orange-500 text-orange-500"
+                  ? "  border-orange-500 text-orange-500"
                   : " border-transparent ")
               }
             >
@@ -214,9 +308,9 @@ const Navbar = () => {
                   d="M18,6 L6,12 L18,18"
                 />
               </svg>
-               <circle cx="18" cy="6" r="3" fill="#212b36" />
-               <circle cx="6" cy="12" r="3" fill="#212b36" />
-               <circle cx="18" cy="18" r="3" fill="#212b36" />
+              <circle cx="18" cy="6" r="3" fill="#212b36" />
+              <circle cx="6" cy="12" r="3" fill="#212b36" />
+              <circle cx="18" cy="18" r="3" fill="#212b36" />
               FAQ
             </LinkScroll>
             <LinkScroll
@@ -231,7 +325,7 @@ const Navbar = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col font-bold items-center text-xs border-t-2 transition-all " +
                 (activeLink === "/"
-                  ?  "  border-orange-500 text-orange-500"
+                  ? "  border-orange-500 text-orange-500"
                   : " border-transparent ")
               }
             >
@@ -257,6 +351,4 @@ const Navbar = () => {
       {/* End Mobile Navigation */}
     </>
   );
-};
-
-export default Navbar;
+}

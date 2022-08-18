@@ -8,7 +8,7 @@ import Udemy from '../public/img/Udemy.png'
 export default function Cta() {
   return (
     <Container className="!p-0">
-      <div className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl try">
+      <div className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl try -mt-10">
         <div className="flex w-full flex-wrap items-center justify-between gap-10 mt-1 md:justify-around partners">
           <div className="text-gray-400 dark:text-gray-400">
             <UdemyLogo  />

@@ -2,10 +2,51 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 // Import react scroll
 import { Link as LinkScroll } from "react-scroll";
+import Image from "next/image";
+import SideImage from '../public/img/Group-161.png';
+import Circle from '../public/img/check_circle.png';
+
+const ResetSucessful = () => {
+  return (
+    <div>
+      <NavBar />
+      <div className="flex items-center bg-white-500">
+        <div className="flex-1 h-full w-full mx-auto bg-white-500 rounded-lg shadow-xl">
+          <div className="flex flex-col md:flex-row">
+            <div className="w-full md:h-auto md:w-1/2 lg:w-6/12 xl:w-6/12 mx-auto side-img">
+              <div className="ml-0 img-div">
+                <Image className="object-cover w-full h-full ml-0 lg:ml-30" src={SideImage}
+                  alt="img" />
+              </div>
+            </div>
+            <div className="flex items-center justify-center p-6 mt-0 lg:-mt-10 sm:p-12 md:w-1/2">
+              <div className="w-full mt-0 xl:mt-40 md:mt-20 lg:mt-40">
+                <div className="text-center flex justify-center items-center align-center h-45 w-50 lg:w-full lg:h-full">
+                 <Image className="circle-image" src={Circle} alt='reset-success' />
+                </div>
+                <h1 className="mb-2 text-2xl md:text-2xl lg:text-3xl font-bold text-center text-[#2D2D2D] H3">
+                  Password Reset Successful!
+                </h1>
+                <p className="text-center text-lg text-[#2D2D2D] ict-email">
+                  Go to your Email to reset your password
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ResetSucessful
 
 
 
-const Navbar = () => {
+
+
+
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState(null);
   const [scrollActive, setScrollActive] = useState(false);
   useEffect(() => {
@@ -17,17 +58,23 @@ const Navbar = () => {
     <>
       <header
         className={
-          "top-0 w-full  z-30 bg-white-500 transition-all " +
+          "top-0 w-full  z-30 bg-white-500 transition-all border shadow shadow-xl " +
           (scrollActive ? " shadow-md pt-0" : " pt-4")
         }
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4 container relative flex flex-wrap items-center justify-between mx-auto lg:justify-between">
           <div className="col-start-1 col-end-2 flex items-center">
-            <img
-              src="/img/predact_logo.png"
-              alt="Logo"
-              className="w-40 cursor-pointer"
-            />
+            <Link href="/">
+              <a>
+                <img
+                  src="/img/predact_logo.png"
+                  alt="Logo"
+                  className="w-40 cursor-pointer"
+                />
+              </a>
+            </Link>
+
+
           </div>
           <ul className="hidden lg:flex col-start-6 col-end-9 text-[#0190FF] font-bold text-xl items-center ul">
             <LinkScroll
@@ -88,7 +135,7 @@ const Navbar = () => {
             </LinkScroll>
             <LinkScroll
               activeClass="active"
-              href="/register"
+              to="/"
               spy={true}
               smooth={true}
               duration={1000}
@@ -117,7 +164,7 @@ const Navbar = () => {
       </header>
       {/* Mobile Navigation */}
 
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
+      <nav className="fixed bg-white-500 lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
         <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
             <LinkScroll
@@ -164,7 +211,7 @@ const Navbar = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col font-bold items-center text-xs border-t-2 transition-all " +
                 (activeLink === "testimonials"
-                  ?  "  border-orange-500 text-orange-500"
+                  ? "  border-orange-500 text-orange-500"
                   : " border-transparent ")
               }
             >
@@ -196,7 +243,7 @@ const Navbar = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs font-bold border-t-2 transition-all " +
                 (activeLink === "faq"
-                  ?  "  border-orange-500 text-orange-500"
+                  ? "  border-orange-500 text-orange-500"
                   : " border-transparent ")
               }
             >
@@ -214,9 +261,9 @@ const Navbar = () => {
                   d="M18,6 L6,12 L18,18"
                 />
               </svg>
-               <circle cx="18" cy="6" r="3" fill="#212b36" />
-               <circle cx="6" cy="12" r="3" fill="#212b36" />
-               <circle cx="18" cy="18" r="3" fill="#212b36" />
+              <circle cx="18" cy="6" r="3" fill="#212b36" />
+              <circle cx="6" cy="12" r="3" fill="#212b36" />
+              <circle cx="18" cy="18" r="3" fill="#212b36" />
               FAQ
             </LinkScroll>
             <LinkScroll
@@ -231,7 +278,7 @@ const Navbar = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col font-bold items-center text-xs border-t-2 transition-all " +
                 (activeLink === "/"
-                  ?  "  border-orange-500 text-orange-500"
+                  ? "  border-orange-500 text-orange-500"
                   : " border-transparent ")
               }
             >
@@ -257,6 +304,4 @@ const Navbar = () => {
       {/* End Mobile Navigation */}
     </>
   );
-};
-
-export default Navbar;
+}

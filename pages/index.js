@@ -43,10 +43,10 @@ export default function Home() {
         title=" Why should you use this app">
         Prediction of students' performance provides support in selecting courses and designing appropriate future study plans for students.
       </SectionTitle>
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
+      <Benefits />
+      
       <div className="testimony dark:bg-none">
-      <SectionTitle
+      <SectionTitle className="remove-sm"
         pretitle="Testimonials"
         title="Don't take our word for it">
       </SectionTitle>
@@ -57,7 +57,7 @@ export default function Home() {
       <Faq />
       </div>
       <div className="cta dark:bg-none" style={{marginTop:'70px'}}>
-      <SectionTitle pretitle="Partners" title="Our Partners"/>
+      <SectionTitle pretitle="" title="Our Partners"/>
       <Cta />
       </div>
       <div className="footer dark:bg-none dark:border-b-solid dark:border-2 dark:border-trueGray-700">

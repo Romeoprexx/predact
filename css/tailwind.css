@@ -6,38 +6,236 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html,
-  body {
-    @apply dark:bg-trueGray-900;
-  }
+.activate {
+  background-color: rgba(194, 228, 255, 0.25);
+
+}
+
+.normalink:hover {
+  background-color: rgba(194, 228, 255, 0.25);
+}
+
+.font-family {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.control {
+  background-color: rgba(194, 228, 255, 0.25);
+}
+
+.dashboard-li {
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  
+}
+
+.animation-hover:after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  height: 2px;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  @apply w-0 bg-primary-500 left-1/2 block bottom-0 absolute;
+}
+.animation-active:after {
+  @apply left-0 w-full;
+  
+}
+.animation-hover:hover:after {
+  @apply left-0 w-full;
 }
 
 .bg-welcome {
   background-image: url(../public/img/Ellipse37.png);
   background-repeat: no-repeat;
   background-size: 70% 100%;
-  
- 
+
+}
+
+.side-img {
+  background-image: url(../public/img/Frame-615.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.img-div {
+  margin-top: 300px;
+}
+
+.name-row {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.name-rows{
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.remember-width {
+  width: 500px;
+}
+
+.remember {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+
+.forget-password {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  color: #0099D1;
 }
 
 .about {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif !important;
   font-style: normal;
   font-weight: 400;
   
+  
+} 
+
+.h1 {
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: bolder !important;
+  width: 100%;
+  
 }
 
-.predict {
+.bracket {
+  text-align: center;
+}
+
+.parenthesis {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  text-align: left;
+}
+
+.H1 {
   font-family: 'Lato', sans-serif !important;
   font-style: normal;
   font-weight: 700;
 }
 
-.body{
-  font-family: 'Open Sans';
+.terminal {
+  width: 998px;
+  height: 141px;
+  background: rgba(194, 228, 255, 0.5);
+  border-radius: 60px;
+}
+
+.ict {
+  font-family: 'Open Sans', sans-serif !important;
   font-style: normal;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+}
+.icts {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+  width: 500px;
+}
+
+.contact-container {
+  width: 500px;
+}
+
+.ict-email {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+  width: 650px; 
+
+}
+
+.H2 {
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+  width: 500px; 
+}
+
+
+.H3 {
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+  width: 650px; 
+ 
+}
+
+.sign-btn {
+  width: 150px;
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+  background: #0099D1 !important;
+}
+
+.reset-password {
+  width: 160px;
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+  background: #0099D1 !important;
+}
+
+.id {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+
+.input-field {
+  border: 3px solid #CECCCC;
+  width: 500px;
+}
+
+.predict {
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: bolder !important;
+  font-size: 45.3px !important;
+ 
+}
+
+.eyelash {
+  position: absolute;
+  right: 25%;
+  top: 25%;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.body{
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+ 
+}
+
+.yezzy {
+  font-family: 'Lato', sans-serif !important;
+  font-weight: 400;
+  
 }
 
 .cards {
@@ -45,15 +243,105 @@
   font-style: normal;
   font-weight: 400;
   
+  
+}
+
+.ul{
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .sliders{
   padding: 0 7px !important;
 }
 
+#sign-in{
+  background: rgba(194, 228, 255, 0.25);
+}
+
+.signin-first {
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  color: #0099D1;
+  
+}
+
+.buttons {
+  font-family: 'Lato', sans-serif !important;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.backArrow {
+  transform: rotate(180deg);
+}
+
+.questions {
+  color: #2D2D2D;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 @media (min-width: 600px) and (max-width: 767px) {
   body {
     background-color: none;
+  }
+
+  .main-hold {
+    margin-left: 0 auto !important;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    height: auto;
+    width: 85% !important;
+  }
+
+  .table-width {
+    width: 90% !important;
+    justify-content: center;
+    display: flex;
+   }
+
+   .top-width {
+    display: flex;
+    justify-content: center;
+   }
+  
+    .top-3-students {
+      width: 100% !important;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .sidebar-height {
+      height: 132vh !important;
+    }
+ 
+  .H3 {
+    width: 100%;
+  }
+
+  .ict-email {
+    width: 100%;
+  }
+
+  .terminal {
+    display: none;
+  }
+
+  .predicts {
+    margin-right: 20px!important;
+  }
+  .eyelash {
+    position: absolute;
+    right: 3%;
+    top: 27%;
+    font-size: 22px;
+  }
+
+  .contact-container {
+    margin-left: 1px;
   }
   .sliders {
     padding: 0 11px !important;
@@ -66,6 +354,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .input-field {
+    width: 100%;
+  }
   .try {
     width: 40%;
   }
@@ -75,23 +367,112 @@
   .testimony-section{
     padding-bottom: 2rem;
   }
+  .predict {
+    font-size: 30px !important;
+    line-height: 2.5rem; /* 40px */
+    
+   
+  }
+  .img-div{
+    margin-left: 70px;
+  }
+  .remember-width {
+   width: 100%;
+  }
+
+  .sliders {
+    width: 60% !important;
+    margin: auto;
+  }
+
+  .cards {
+    width: 100% !important;
+  }
+  
 }
 
 @media (min-width: 767px) and (max-width: 1024px) {
   body {
     background-color: none;
   }
+  .dashboard-image {
+    width: 20%;
+  }
+  .terminal {
+   display: none;
+  }
+  .secondary-hold {
+     width: 100px !important;
+     padding: 10px !important;
+     margin-top: 30px !important;
+  }
+
+  .main-hold {
+    margin-left: 0 auto !important;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    height: auto;
+    width: 90% !important;
+  }
+  .font-family {
+    text-align: center;
+  }
+  .H3 {
+    width: 100%;
+  }
+  .top-width {
+    width: 100% !important;
+    justify-content: center;
+    display: flex;
+   }
+  
+  .top-3-students {
+      width: 100% !important;
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+  .sidebar-height {
+      height: 143vh !important;
+  }
+  .ict-email {
+    width: 100%;
+  }
+
+  .eyelash {
+    position: absolute;
+    right: 5%;
+    top: 27%;
+    font-size: 20px;
+  }
   .sliders {
     width: 80% !important;
     padding: 0 11px !important;
     
   }
+
+  .contact-container {
+    width: 100%;
+  }
+
+  .icts {
+    width: 100%;
+  }
+
+  .H2 {
+    width: 100%;
+  }
+
   .testimony-section{
     padding-bottom: 3rem;
   }
   .bg-welcome{
     background-size: cover;
     background-image: -moz-linear-gradient(#c2e4ff);
+  }
+
+  .input-field {
+    width: 100%;
   }
   .partners{
     display: flex;
@@ -103,6 +484,20 @@
   .footer-logo {
     width: 80%;
   }
+  .predict {
+    font-size: 35px !important;
+    line-height: 3rem; /* 40px */
+    width: 100%;
+   
+  }
+  .remember-width {
+    width: 100%;
+  }
+
+  .img-div{
+    margin-left: 10px;
+    margin-top: 200px;
+  }
   
 }
 @media (max-width: 600px) {
@@ -112,9 +507,45 @@
   .sliders {
     padding: 0 12px !important;
   }
+
+  .top-width {
+    display: flex;
+    justify-content: center;
+  }
+
+
+ .main-hold {
+  width: 80% !important;
+ }
+
+ .table-width {
+  width: 90% !important;
+  justify-content: center;
+  display: flex;
+ }
+
+  .top-3-students {
+    width: 90% !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .sidebar-height {
+    height: 122vh !important;
+  }
   .bg-welcome{
     background-size: cover;
     background-image: -moz-linear-gradient(#c2e4ff);
+  }
+
+  .H3 {
+    width: 100%;
+  }
+
+  .ict-email {
+    width: 100%;
+  }
+  .remove-sm {
+    display: none;
   }
   .partners{
     display: flex;
@@ -142,33 +573,190 @@
     width: 20%;
     height: 20%;
   }
+  .predict {
+    font-size: 28px !important;
+    line-height: 3rem; /* 40px */
+  }
+
+  .terminal {
+    display: none;
+  }
+
+  .img-div{
+    margin-left: 30px;
+  }
+
+  .eyelash {
+    position: absolute;
+    right: 9%;
+    top: 27%;
+    font-size: 20px;
+  }
+
+  .sliders {
+    width: 75% !important;
+    margin: auto;
+  }
+
+  .cards {
+    width: 100% !important;
+  }
+  
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   body {
     background-color: none;
   }
+
+  .terminal {
+    width: 100%;
+  }
+  .H3 {
+    width: 100%;
+  }
+
+  .ict-email {
+    width: 100%;
+  }
+  .eyelash {
+    position: absolute;
+    right: 4%;
+    top: 27%;
+    font-size: 23px;
+  }
+  .main-hold {
+    width: 40%;
+  }
+  .secondary-hold {
+     width: 80px !important;
+     padding: 10px !important;
+     margin-top: 30px !important;
+  }
+  .font-family {
+    text-align: center;
+  }
+  .icts {
+    width: 100%;
+  }
+
+  .contact-container {
+    width: 100%;
+  }
+
+  .H2 {
+    width: 100%;
+  }
   .sliders {
     width: 59% !important;
     padding: 0 11px !important;
   }
+
+  .remember-width {
+    width: 100%;
+  }
+
+  .input-field {
+    width: 100%;
+  }
   .testimony-section{
     padding-bottom: 3rem;
+  }
+  .predict {
+    font-size: 35px !important;
+    line-height: 3rem; /* 40px */
+    width: 99%;
+   
+  }
+  .img-div{
+    margin-left: 20px;
+  }
+
+  .sidebar-height {
+    height: 110vh;
   }
 }
 @media (min-width: 1200px) and (max-width: 1270px) {
   body {
     background-color: none;
   }
+  .sidebar-height {
+    height: 110vh;
+  }
+  .H3 {
+    width: 100%;
+  }
+  .main-hold {
+    width: 40%;
+    height: auto !important;
+  }
+  .secondary-hold {
+     width: 100px !important;
+     padding: 10px !important;
+     margin-top: 30px !important;
+  }
+  .ict-email {
+    width: 100%;
+  }
+  .eyelash {
+    position: absolute;
+    right: 7%;
+    top: 27%;
+    font-size: 23px;
+  }
+
+  .icts {
+    width: 100%;
+  }
+
+  .H2 {
+    width: 100%;
+  }
+
   .sliders {
     width: 60% !important;
   }
   .testimony-section{
     padding-bottom: 2rem;
   }
+  .predict {
+    font-size: 39px !important;
+    line-height: 3.5rem; /* 40px */
+   
+  }
+  .img-div{
+    margin-left: 50px;
+  }
+  
+  
 }
 @media (min-width: 1270px) and (max-width: 1280px) {
   body {
     background-color: none;
+  }
+  .H3 {
+    width: 100%;
+  }
+  .main-hold {
+    width: 40%;
+  }
+
+  .sidebar-height {
+    height: 110vh;
+  }
+  .secondary-hold {
+     width: 100px !important;
+     padding: 10px !important;
+     margin-top: 50px !important;
+  }
+
+  .ict-email {
+    width: 100%;
+  }
+  .eyelash {
+    position: absolute;
+    right: 9%;
+    top: 27%;
+    font-size: 23px;
   }
   .sliders {
     width: 56% !important;
@@ -176,11 +764,58 @@
   .testimony-section{
     padding-bottom: 1rem;
   }
+  .predict {
+    font-size: 41px !important;
+    line-height: 3.5rem; /* 40px */
+    
+   
+  }
+  .img-div{
+    margin-left: 60px;
+  }
+  .button-div {
+    margin-right: 15px;
+  }
+  
 }
 
 @media (min-width: 1280px) and (max-width: 1378px) {
   body {
     background-color: none;
+  }
+  .main-hold {
+    width: 40%;
+  }
+  .secondary-hold {
+     width: 120px !important;
+     padding: 10px !important;
+     margin-top: 30px !important;
+  }
+
+  .sidebar-height {
+    height: 110vh;
+  }
+  .H3 {
+    width: 100%;
+  }
+
+  .ict-email {
+    width: 100%;
+  }
+
+  .eyelash {
+    position: absolute;
+    right: 16%;
+    top: 27%;
+    font-size: 24px;
+  }
+
+  .contact-container {
+    width: 100%;
+  }
+
+  .button-div {
+    margin-right: 60px;
   }
   .sliders {
     width: 45% !important;
@@ -188,11 +823,70 @@
   .testimony-section{
     padding-bottom: 1rem;
   }
+  .img-div{
+    margin-left: 70px;
+  }
 }
 @media (min-width: 1378px) and (max-width: 1578px) {
   .sliders {
     width: 45% !important;
   }
+  .button-div {
+    margin-right: 120px;
+  }
+  .img-div{
+    margin-left: 130px;
+  }
+  
+ 
+  .H3 {
+    width: 100%;
+  }
+
+  .ict-email {
+    width: 100%;
+  }
+
+  .contact-container {
+    margin-left: 1px;
+  }
+
+  body {
+    background-color: none;
+  }
+  .eyelash {
+    position: absolute;
+    right: 25%;
+    top: 25%;
+    font-size: 23px;
+  }
+  .main-hold {
+    width: 33% !important;
+  }
+  .secondary-hold {
+     width: 150px !important;
+     padding: 20px !important;
+     margin-top: 30px !important;
+     margin: 20px;
+  }
+  .sidebar-height {
+    height: 105vh;
+  }
+}
+
+.error {
+  color: #D8000C;
+  font-size: 0.75rem;
+  text-align: left;
+  margin-top: 0.25rem;
+}
+
+input.input-error {
+  border-color: #D8000C;
+}
+
+button:disabled {
+  opacity: 0.35;
 }
 
 .testimony {
@@ -207,10 +901,16 @@
 .slick-dots li.slick-active button:before {
   color: #0190FF !important;
   font-size: 1rem;
+
 }
 
 .slick-dots li button:before {
  font-size: 1rem !important;
+ margin-top: -60px;
+}
+
+.move-up {
+  margin-top: -40px;
 }
 
 .footer {
@@ -222,4 +922,45 @@
 
 .cta {
   background-image: linear-gradient(#FAF9F9, #FAF9F9, #FAF9F9);
+}
+
+.top-3-students {
+  padding: 10px;
+  background-image: url(../public/img/Rectangle305.png);
+  width: 502px;
+  height: 65px;
+
+}
+
+.top-3-students-font {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.table-width {
+  width: 452px;
+}
+
+.name-row {
+  width: 350px;
+}
+
+.id-row {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+}
+
+.grade {
+  font-family: 'Open Sans', sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.table-div {
+  background-color: white ;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 20px;
 }

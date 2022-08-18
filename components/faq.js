@@ -6,13 +6,13 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 export default function Faq() {
   return (
     <Container className="!p-0">
-      <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
+      <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl" id="faq">
         {faqdata.map((item, index) => (
           <div key={item.question} className="mb-5">
             <Disclosure>
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex items-center justify-between font-bold w-full px-4 py-4 text-lg text-left text-gray-800 rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-trueGray-800 dark:text-gray-200">
+                  <Disclosure.Button className="flex items-center justify-between font-bold w-full px-4 py-4 text-lg text-left text-gray-800 rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-trueGray-800 dark:text-gray-200 questions">
                     <span>{item.question}</span>
                     <ChevronDownIcon
                       className={`${
@@ -46,13 +46,13 @@ const faqdata = [
     
   },
   {
-    question: "Must a school be registered?",
-    answer: "Yes a school must register in order for the admin to get access to the prediction dashboard."
+    question: "Must it be a school to be registered?",
+    answer: "Yes, it must be a school and tertiary institution to be registered. Either federal, state or private schools in Nigeria."
   },
   {
-    question: "What is the scope of prediction?",
+    question: "What is the scope of Prediction?",
     answer:
-      "Information like Attendance, Class test, Seminar and Assignment marks were collected from the students management system, to predict the performance at the end of the session.",
+      "There are various Prediction matrics we use that have been proven right 99% of the time. Register with Us and we will brief you the details",
   },
 ];
 
